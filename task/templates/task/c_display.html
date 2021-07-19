@@ -1,0 +1,13 @@
+{% extends 'task/base.html' %}
+{% block content %}
+    {% for entry in all_entries %}
+    <div class="card">
+        <div class="container">
+          <h4><b>Date Ordered : {{ entry.date_ordered }}</b></h4>
+          <p>payment_status : {{ entry.payment_status }}</p>
+          <p>printing_status : {{ entry.printing_status }}</p>
+          <p>OTP : {{ entry.otp}}</p>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}

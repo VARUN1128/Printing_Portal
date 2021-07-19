@@ -1,0 +1,20 @@
+{% extends "tutorial/layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<!-- <h1>Printing Portal</h1> -->
+	<!-- <p class="lead">Printing Portal</p> -->
+	{% if user.is_authenticated %}
+		<div class="content-section">
+			<form action="{% url 'place_order' %}" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<fieldset class="form-group">
+					<legend class="border-bottom mb-4">Place Order</legend>
+					{{ form|crispy }}
+				</fieldset>
+				<div class="form-group">
+					<button class="btn btn-outline-info" type="submit">Go for payments</button>
+				</div>
+			</form>
+		</div>
+	{% endif %}
+{% endblock %}

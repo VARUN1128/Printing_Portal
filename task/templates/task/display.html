@@ -1,0 +1,21 @@
+{% extends 'task/base.html' %}
+{% block content %}
+    {% for entry in all_entries %}
+    <div class="card">
+        <div class="container">
+          <h4><b>Date Ordered : {{ entry.date_ordered }}</b></h4>
+          <p>customer_name : {{ entry.customer_name }}</p>
+          <p>Customer_email : {{ entry.customer_email }}</p>
+          <p>Amount_paid : {{ entry.cost }}</p>
+          <p>payment_status : {{ entry.payment_status }}</p>
+          <p>printing_status : {{ entry.printing_status }}</p>
+          <p> <a href="{% url 'download' entry.docfile %}" class="btn btn-primary btn-large">Click Here to Download document</a> <a href="{% url 'change' entry.payment_id %}" class="btn btn-primary btn-large">Change Printing Status</a> </p>
+          <form action="{% url 'valid' entry.payment_id %}" method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="submit">
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}
