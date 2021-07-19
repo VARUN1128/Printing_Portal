@@ -1,0 +1,8 @@
+app_id: 7c214080-8ada-4d78-a056-bee56cae2a3b
+app_secret: VgE_yQ~g.euc11si5bTx8POiGR.n_AhCK3
+redirect: "http://localhost:8000/printing_portal/callback"
+scopes:
+  - user.read
+  - mailboxsettings.read
+  - calendars.readwrite
+authority: "https://login.microsoftonline.com/common"
