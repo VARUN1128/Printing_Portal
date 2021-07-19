@@ -2,7 +2,7 @@
 A printing portal website developed using Django Framework,where user can upload his/her document to be printed and can pay respective amount using integrated epayment gateway.
 The website includes seperate login system for general users and shopkeeper authenticated with microsoft auth.
 
-## Project-Members
+## Project-Members::
 1.Abhishek Agrahari  **https://github.com/abhishekagrahari123/**
 
 2.Mridul Gupta 
