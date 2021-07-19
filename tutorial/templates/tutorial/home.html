@@ -1,0 +1,23 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <HomeSnippet> -->
+{% extends "tutorial/layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Printing Portal</h1>
+  {% if user.is_authenticated %}<br>
+    <h4>Welcome {{ user.name }}!</h4><br>
+    {% if user.is_shopkeeper %}
+      <a href="{% url 'shopkeeper-orders' %}" class="btn btn-primary btn-large">Click here to view received oders.<br></a>
+    {% else %}
+      <a href="{% url 'place_order' %}" class="btn btn-primary btn-large">Click here to place New orders.<br></a>
+      <a href="{% url 'customer-orders' %}" class="btn btn-primary btn-large">View Old Transaction Status.<br></a>
+    {% endif %}
+    <!-- <p>Use the navigation bar at the top of the page to get started.</p> -->
+  {% else %}
+    <a href="{% url 'signin' %}" class="btn btn-primary btn-large">Click here to sign in</a>
+  {% endif %}
+</div>
+{% endblock %}
+<!-- </HomeSnippet> -->
