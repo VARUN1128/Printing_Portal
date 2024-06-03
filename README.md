@@ -1,19 +1,5 @@
-# Printing-portal
-A printing portal website developed using Django Framework,where user can upload his/her document to be printed and can pay respective amount using integrated epayment gateway.
-The website includes seperate login system for general users and shopkeeper authenticated with microsoft auth.
 
-## Project-Members::
-1.Abhishek Agrahari  **https://github.com/abhishekagrahari123/**
 
-2.Mridul Gupta 
-
-3.Manish Kumar **https://github.com/manish-kumar-iit-guwahati**
-
-4.Kevin patel  **https://github.com/kevinpatelwd101/**
-
-5.Abhijeet Kumar **https://github.com/Abhijeet-singhania**
-
-6.Ekeshwar Gowla **https://github.com/ekeshwar610**
 
 ## Installation
 python and django need to be installed
@@ -25,8 +11,9 @@ pip install django
 
 Go to the Printing-Portal folder and run 
 
-```bash
-python manage.py runserver
+```
+python manage.py runserverash
+
 ```
 
 Then go to the browser and enter the url **http://loaclhost:8000/printing_portal/**
